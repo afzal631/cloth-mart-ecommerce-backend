@@ -21,10 +21,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(
   cors({
-    origin:
-      process.env.NODE_ENV == "development"
-        ? "http://localhost:5173"
-        : "https://cloth-mart-frontend.vercel.app/",
+    origin:"https://cloth-mart-frontend.vercel.app/",
     credentials: true,
   })
 );
