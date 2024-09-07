@@ -77,7 +77,7 @@ const logoutUser = asyncHandler(async (req, res) => {
 });
 
 // @desc get all users
-// route GET /api/users
+// route GET /api/users/all-users
 // @access private
 const getAllUser = asyncHandler(async (req, res) => {
   const users = await User.find({}, "id email role").sort({ createdAt: -1 });
